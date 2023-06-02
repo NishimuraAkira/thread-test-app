@@ -17,6 +17,12 @@ export default {
       beforeCounter: 0
     }
   },
+  beforeRouteEnter() {
+    console.log('beforeRouteEnter')
+  },
+  beforeRouteUpdate() {
+    console.log('beforeRouteUpdate')
+  },
   mounted() {
     this.runTask()
   },

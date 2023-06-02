@@ -1,8 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
@@ -14,11 +9,34 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
+      <button @click="onClick">About</button>
     </div>
   </header>
 
   <RouterView />
 </template>
+
+<script>
+import HelloWorld from '@/components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  },
+  methods: {
+    onClick() {
+      this.$router.push('/about?page=2')
+        .then(failure => {
+          console.log(`Router push result: ${failure}`)
+        })
+        .catch(err => {
+          console.log(`Router push error: ${err}`)
+        })
+    }
+  }
+}
+</script>
 
 <style scoped>
 header {
