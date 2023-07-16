@@ -7,20 +7,21 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "pkg_update": "npm install -D"
   },
   "dependencies": {
-    "pinia": "^2.0.36",
-    "vue": "^3.3.2",
-    "vue-router": "^4.2.0"
+    "pinia": "^2.1.4",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.2.0",
+    "@rushstack/eslint-patch": "^1.3.2",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "^7.1.0",
-    "eslint": "^8.39.0",
-    "eslint-plugin-vue": "^9.11.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-vue": "^9.15.1",
     "prettier": "^2.8.8",
-    "vite": "^4.3.5"
+    "vite": "^4.4.4"
   }
 }
