@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import lifecycle from '@/mixins/lifecycle'
 export default {
   name: 'aboutPage',
   data() {
@@ -17,6 +18,7 @@ export default {
       beforeCounter: 0
     }
   },
+  mixins: [lifecycle],
   beforeRouteEnter() {
     console.log('beforeRouteEnter')
   },
