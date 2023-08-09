@@ -28,11 +28,12 @@ export default {
   },
   methods: {
     onClick() {
-      this.$router.push('/about')
-        .then(failure => {
+      this.$router
+        .push('/about')
+        .then((failure) => {
           console.log(`Router push result: ${failure}`)
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(`Router push error: ${err}`)
         })
     }
